@@ -13,10 +13,10 @@ from logging.handlers import RotatingFileHandler
 TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6257410409:AAHXiNO5Vp4fq8ZapZQmrJDXHoQB30x_hrw")
 
 #Your API ID from my.telegram.org
-APP_ID = int(os.environ.get("APP_ID", 4942572))
+APP_ID = int(os.environ.get("APP_ID", 17107151))
 
 #Your API Hash from my.telegram.org
-API_HASH = os.environ.get("API_HASH", "1ad3e0431fa60494d56a1c74a3887185")
+API_HASH = os.environ.get("API_HASH", "e8ef290caf40133405160fdc0fabcbee")
 
 #Your db channel Id
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", -1001993087224))
@@ -29,7 +29,7 @@ PORT = os.environ.get("PORT", 8080)
 
 #Database 
 DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://david:david@cluster0.o8umz.mongodb.net/?retryWrites=true&w=majority")
-DB_NAME = os.environ.get("DATABASE_NAME", "filesharexbot")
+DB_NAME = os.environ.get("DATABASE_NAME", "SUPERHERE-DB")
 
 SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "upshrink.com")
 SHORTLINK_API = os.environ.get("SHORTLINK_API", "e3c0e7310e3808950688cfef4a323b759249a94b")
