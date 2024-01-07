@@ -1,6 +1,3 @@
-#(©)CodeXBotz
-#LEGENDGOD
-
 import asyncio
 import base64
 import logging
@@ -182,7 +179,7 @@ async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton(
-                "⚡ Join ⚡",
+                "🔥 Join Channel 🔥",
                 url = client.invitelink)
         ]
     ]
