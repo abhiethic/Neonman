@@ -147,7 +147,7 @@ async def start_command(client: Client, message: Message):
             link = await get_shortlink(SHORTLINK_URL, SHORTLINK_API, f'https://telegram.dog/{client.username}?start=verify_{token}')
             btn = [
                 [InlineKeyboardButton("Click Here To Refresh Token", url=link)],
-                [InlineKeyboardButton('🗳 Tutorial 🗳', url="https://telegram.dog/The_How_To_Open/9")]
+                [InlineKeyboardButton('🗳 Tutorial 🗳', url=TUT_VID)]
             ]
             await message.reply(f"""<b>👋 Hello...</b> {message.from_user.mention}
 
@@ -166,7 +166,7 @@ Watch Video Tutorial If You're Facing Issue
         
 #=====================================================================================##
 
-WAIT_MSG = """"<b>Processing ...</b>"""
+WAIT_MSG = """"<b>Processing...</b>"""
 
 REPLY_ERROR = """<code>Use This Command As A Replay To A Telegram Message Without Any Spaces.</code>"""
 
