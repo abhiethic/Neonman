@@ -157,9 +157,7 @@ async def start_command(client: Client, message: Message):
 
 <i>This Is An Ads Token. If You Pass 1 Ad, You Can Use The Bot For 24 Hours After Passing The Ad
 
-Watch Video Tutorial If You're Facing Issue
-
-<b>APPLE/IPHONE USERS COPY TOKEN LINK AND OPEN IN CHROME BROWSER</b></i>""", reply_markup=InlineKeyboardMarkup(btn), protect_content=True, quote=True)
+Watch Video Tutorial If You're Facing Issue</i>""", reply_markup=InlineKeyboardMarkup(btn), protect_content=True, quote=True)
 
 
     
