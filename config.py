@@ -68,7 +68,7 @@ DISABLE_CHANNEL_BUTTON = os.environ.get("DISABLE_CHANNEL_BUTTON", None) == 'True
 BOT_STATS_TEXT = "<b>😴 Haven't Slept Since : </b>{uptime}"
 try:
     USER_REPLY_TEXT = []
-    for uwu in (os.environ.get("USER_REPLY_TEXT", "❌ Don't Send Me Messages Directly, I'm Only File Share Bot !!|Are You Komedi Me? 😂|Really Nigga? 🗿").split("|")):
+    for uwu in (os.environ.get("USER_REPLY_TEXT", "❌ Don't Send Me Messages Directly, I'm Only File Share Bot !!|Are You Komedi Me? 😂|Really Nigga? 🗿| Don't Try This Kid!|Go and Enjoy Your Video 😒|HaHa You Noob😂").split("|")):
         USER_REPLY_TEXT.append(str(uwu))
 except Exception as uff:
         raise Exception("Error: " + str(uff))
