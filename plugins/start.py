@@ -34,7 +34,9 @@ from shortzy import Shortzy
 
 
 import pyrogram.utils
-pyrogram.utils.MIN_CHANNEL_ID = [-100190175643, -1002022850862]
+idz = [-100190175643, -1002022850862]
+for z in idz:
+    pyrogram.utils.MIN_CHANNEL_ID = z
 
 
 
