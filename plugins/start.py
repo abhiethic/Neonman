@@ -34,8 +34,9 @@ from shortzy import Shortzy
 
 
 import pyrogram.utils
-pyrogram.utils.MIN_CHANNEL_ID = -1002147483647
-pyrogram.utils.MAX_CHANNEL_ID = -1000000000000
+pyrogram.utils.MIN_CHANNEL_ID = -100190175643
+pyrogram.utils.MAX_CHANNEL_ID = -1002022850862
+
 
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
