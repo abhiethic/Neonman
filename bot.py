@@ -11,6 +11,8 @@ from datetime import datetime
 import schedule, time, threading
 from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID, PORT
 
+import pyrogram.utils
+
 class Bot(Client):
     def __init__(self):
         super().__init__(
@@ -32,6 +34,7 @@ class Bot(Client):
 
         if FORCE_SUB_CHANNEL:
             try:
+                pyrogram.utils.MIN_CHANNEL_ID = FORCE_SUB_CHANNEL
                 link = (await self.get_chat(FORCE_SUB_CHANNEL)).invite_link
                 if not link:
                     await self.export_chat_invite_link(FORCE_SUB_CHANNEL)
@@ -44,6 +47,7 @@ class Bot(Client):
                 self.LOGGER(__name__).info("\nBot Stopped...")
                 sys.exit()
         try:
+            pyrogram.utils.MIN_CHANNEL_ID = CHANNEL_ID
             db_channel = await self.get_chat(chat_id=CHANNEL_ID)
             self.db_channel = db_channel
             test = await self.send_message(chat_id = db_channel.id, text = "Test Message")
