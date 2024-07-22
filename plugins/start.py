@@ -33,23 +33,9 @@ from database.database import add_user, del_user, full_userbase, present_user
 from shortzy import Shortzy
 
 
-MIN_CHANNEL_ID = -1002147483647
-MAX_CHANNEL_ID = -1000000000000
-MIN_CHAT_ID = -2147483647
-MAX_USER_ID_OLD = 2147483647
-MAX_USER_ID = 999999999999
-
-def get_peer_type(peer_id: int) -> str:
-    if peer_id < 0:
-        if MIN_CHAT_ID <= peer_id:
-            return "chat"
-
-        if MIN_CHANNEL_ID <= peer_id < MAX_CHANNEL_ID:
-            return "channel"
-    elif 0 < peer_id <= MAX_USER_ID:
-        return "user"
-
-    raise ValueError(f"Peer id invalid: {peer_id}")
+import pyrogram.utils
+pyrogram.utils.MIN_CHANNEL_ID = -1002147483647
+pyrogram.utils.MAX_CHANNEL_ID = -1000000000000
 
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
