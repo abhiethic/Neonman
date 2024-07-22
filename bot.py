@@ -47,6 +47,7 @@ class Bot(Client):
             test = await self.send_message(chat_id = CHANNEL_ID, text = "Test Message")
             
             db_channel = await self.get_chat(chat_id=CHANNEL_ID)
+            print(db_channel)
             self.db_channel = db_channel
             
             await test.delete()
