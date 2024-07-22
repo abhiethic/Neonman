@@ -44,7 +44,7 @@ class Bot(Client):
                 self.LOGGER(__name__).info("\nBot Stopped...")
                 sys.exit()
         try:
-            test = await self.send_message(chat_id = db_channel.id, text = "Test Message")
+            test = await self.send_message(chat_id = CHANNEL_ID, text = "Test Message")
             
             db_channel = await self.get_chat(chat_id=CHANNEL_ID)
             self.db_channel = db_channel
