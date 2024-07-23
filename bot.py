@@ -11,6 +11,9 @@ from datetime import datetime
 import schedule, time, threading
 from config import API_HASH, APP_ID, LOGGER, TG_BOT_TOKEN, TG_BOT_WORKERS, FORCE_SUB_CHANNEL, CHANNEL_ID, PORT
 
+import pyrogram.utils
+pyrogram.utils.MIN_CHANNEL_ID = -1001901756433
+
 class Bot(Client):
     def __init__(self):
         super().__init__(
@@ -44,7 +47,6 @@ class Bot(Client):
                 self.LOGGER(__name__).info("\nBot Stopped...")
                 sys.exit()
         try:
-            await self.get_messages(CHANNEL_ID, 1)
             db_channel = await self.get_chat(chat_id=CHANNEL_ID)
             self.db_channel = db_channel
             test = await self.send_message(chat_id = db_channel.id, text = "Test Message")
