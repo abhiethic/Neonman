@@ -123,8 +123,8 @@ async def start_command(client: Client, message: Message):
 
     elif verify_status['is_verified']:
         reply_markup = InlineKeyboardMarkup(
-            [[InlineKeyboardButton("😊 About Me", callback_data="about"),
-              InlineKeyboardButton("🔒 Close", callback_data="close")]]
+            [[InlineKeyboardButton("😊 ᴀʙᴏᴜᴛ ᴍᴇ", callback_data="about"),
+              InlineKeyboardButton("🔒 ᴄʟᴏsᴇ", callback_data="close")]]
         )
         await message.reply_text(
             text=START_MSG.format(
@@ -177,7 +177,7 @@ async def not_joined(client: Client, message: Message):
     buttons = [
         [
             InlineKeyboardButton(
-                "🔥 Join Channel 🔥",
+                "Join Channel",
                 url = client.invitelink)
         ]
     ]
