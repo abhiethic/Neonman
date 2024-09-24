@@ -10,7 +10,7 @@ from logging.handlers import RotatingFileHandler
 
 
 #Bot token @Botfather
-TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "6257410409:AAHXiNO5Vp4fq8ZapZQmrJDXHoQB30x_hrw")
+TG_BOT_TOKEN = os.environ.get("TG_BOT_TOKEN", "")
 
 #Your API ID from my.telegram.org
 APP_ID = int(os.environ.get("APP_ID", 17107151))
@@ -19,23 +19,23 @@ APP_ID = int(os.environ.get("APP_ID", 17107151))
 API_HASH = os.environ.get("API_HASH", "e8ef290caf40133405160fdc0fabcbee")
 
 #Your db channel Id
-CHANNEL_ID = int(os.environ.get("CHANNEL_ID", -1001993087224))
+CHANNEL_ID = int(os.environ.get("CHANNEL_ID", ))
 
 #OWNER ID
-OWNER_ID = int(os.environ.get("OWNER_ID", 5786350629))
+OWNER_ID = int(os.environ.get("OWNER_ID", ))
 
 #Port
 PORT = os.environ.get("PORT", 8080)
 
 #Database 
-DB_URI = os.environ.get("DATABASE_URL", "mongodb+srv://david:david@cluster0.o8umz.mongodb.net/?retryWrites=true&w=majority")
+DB_URI = os.environ.get("DATABASE_URL", "")
 DB_NAME = os.environ.get("DATABASE_NAME", "SUPERHERE-DB")
 
-SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "upshrink.com")
-SHORTLINK_API = os.environ.get("SHORTLINK_API", "e3c0e7310e3808950688cfef4a323b759249a94b")
-VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 300)) # token expiration time in seconds
+SHORTLINK_URL = os.environ.get("SHORTLINK_URL", "")
+SHORTLINK_API = os.environ.get("SHORTLINK_API", "")
+VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # token expiration time in seconds
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
-TUT_VID = os.environ.get("TUT_VID","https://t.me/The_How_To_Open/8")
+TUT_VID = os.environ.get("TUT_VID","https://t.me/The_How_To_Open/13")
 # warning !! not for kidz
 TIME_TO_DEL = int(os.environ.get("TIME_TO_DEL", 0))
 
