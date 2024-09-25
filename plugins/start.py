@@ -33,7 +33,7 @@ from database.database import add_user, del_user, full_userbase, present_user
 from shortzy import Shortzy
 
 import pyrogram.utils
-pyrogram.utils.MIN_CHANNEL_ID = -1002099403245
+pyrogram.utils.MIN_CHANNEL_ID = -1002107245494
 
 
 @Bot.on_message(filters.command('start') & filters.private & subscribed)
