@@ -155,13 +155,13 @@ async def start_command(client: Client, message: Message):
 
 <b>⚠️ Your Ads Token Is Expired, Refresh Your Token And Try Again.</b>
 
-<b> Token Timeout: </b> 24 Hours
+<b>• Token Timeout: </b> 24 Hours
 
-<blockquote> <b>What Is The Token?</b>
+```<b>What Is The Token?</b>
 
-<i>This Is An Ads Token. If You Pass 1 Ad, You Can Use The Bot For 24 Hours After Passing The Ad
+This Is An Ads Token. If You Pass 1 Ad, You Can Use The Bot For 24 Hours After Passing The Ad
 
-Watch Video Tutorial If You're Facing Issue</i> </blockquote>""", reply_markup=InlineKeyboardMarkup(btn), protect_content=True, quote=True)
+Watch Video Tutorial If You're Facing Issue```""", reply_markup=InlineKeyboardMarkup(btn), protect_content=True, quote=True)
 
 
     
