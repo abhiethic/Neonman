@@ -57,11 +57,11 @@ async def start_command(client: Client, message: Message):
     if "verify_" in message.text:
         _, token = message.text.split("_", 1)
         if verify_status['verify_token'] != token:
-            return await message.reply("Your Token Is Invalid Or Expired. Try Again By Clicking /start")
+            return await message.reply("❌ Your Token Is Invalid Or Expired. Try Again By Clicking /start")
         await update_verify_status(id, is_verified=True, verified_time=time.time())
         if verify_status["link"] == "":
             reply_markup = None
-        await message.reply(f"✅ Your Token Successfully Verified And Valid For: 24 Hours", reply_markup=reply_markup, protect_content=True, quote=True)
+        await message.reply(f"✅ Your Token Successfully Verified And Valid For Next 24 Hours", reply_markup=reply_markup, protect_content=True, quote=True)
 
     elif len(message.text) > 7 and verify_status['is_verified']:
         try:
@@ -157,11 +157,11 @@ async def start_command(client: Client, message: Message):
 
 <b>• Token Timeout: </b> 24 Hours
 
-```<b>What Is The Token?</b>
+<b>What Is The Token?</b>
 
 This Is An Ads Token. If You Pass 1 Ad, You Can Use The Bot For 24 Hours After Passing The Ad
 
-Watch Video Tutorial If You're Facing Issue```""", reply_markup=InlineKeyboardMarkup(btn), protect_content=True, quote=True)
+Watch Video Tutorial If You're Facing Issue""", reply_markup=InlineKeyboardMarkup(btn), protect_content=True, quote=True)
 
 
     
@@ -215,7 +215,7 @@ async def not_joined(client: Client, message: Message):
 async def get_users(client: Bot, message: Message):
     msg = await client.send_message(chat_id=message.chat.id, text=WAIT_MSG)
     users = await full_userbase()
-    await msg.edit(f"<b>👥 Total Users :</b> {len(users)}")
+    await msg.edit(f"<b>👥 Total Active Users :</b> {len(users)}")
 
 @Bot.on_message(filters.private & filters.command('broadcast') & filters.user(ADMINS))
 async def send_text(client: Bot, message: Message):
