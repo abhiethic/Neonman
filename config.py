@@ -37,7 +37,7 @@ VERIFY_EXPIRE = int(os.environ.get('VERIFY_EXPIRE', 86400)) # token expiration t
 IS_VERIFY = os.environ.get("IS_VERIFY", "True")
 TUT_VID = os.environ.get("TUT_VID","https://t.me/The_How_To_Open/13")
 # warning !! not for kidz
-TIME_TO_DEL = int(os.environ.get("TIME_TO_DEL", 0))
+TIME_TO_DEL = int(os.environ.get("TIME_TO_DEL", 3600))
 
 #force sub channel id, if you want to enable force sub
 FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", 0))
@@ -48,7 +48,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "👋 Hello... {mention}\n\nI Can Store Private Files In Specified Channel And Other Users Can Access It Through A Special Link. 🔗")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "5786350629 93372553").split()):
+    for x in (os.environ.get("ADMINS", "5850977550 6934948861").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins List Doesn't Contain Valid Integers.")
