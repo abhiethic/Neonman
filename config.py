@@ -48,7 +48,7 @@ TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 START_MSG = os.environ.get("START_MESSAGE", "👋 Hello... {mention}\n\nI Can Store Private Files In Specified Channel And Other Users Can Access It Through A Special Link. 🔗")
 try:
     ADMINS=[]
-    for x in (os.environ.get("ADMINS", "5850977550 6934948861").split()):
+    for x in (os.environ.get("ADMINS", "7981975454 7554815378").split()):
         ADMINS.append(int(x))
 except ValueError:
         raise Exception("Your Admins List Doesn't Contain Valid Integers.")
